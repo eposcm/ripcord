@@ -34,17 +34,17 @@
         "php-compatibility-report-74": [
             "Composer\\Config::disableProcessTimeout",
             "@putenv PHPCS_VERSION=7.4",
-            "@php vendor/bin/phpcs -p --standard=.phpcs.xml.dist --runtime-set testVersion %PHPCS_VERSION% --report-xml=var/php-compatibility/report-%PHPCS_VERSION%.xml --report-full=var/php-compatibility/report-%PHPCS_VERSION%.txt ./src"
+            "@php vendor/bin/phpcs -p --standard=.phpcs.xml.dist --runtime-set testVersion %PHPCS_VERSION% --report-xml=.php-compatibility/report-%PHPCS_VERSION%.xml --report-full=.php-compatibility/report-%PHPCS_VERSION%.txt ./"
         ],
         "php-compatibility-report-82": [
             "Composer\\Config::disableProcessTimeout",
             "@putenv PHPCS_VERSION=8.2",
-            "@php vendor/bin/phpcs -p --standard=.phpcs.xml.dist --runtime-set testVersion %PHPCS_VERSION% --report-xml=var/php-compatibility/report-%PHPCS_VERSION%.xml --report-full=var/php-compatibility/report-%PHPCS_VERSION%.txt ./src"
+            "@php vendor/bin/phpcs -p --standard=.phpcs.xml.dist --runtime-set testVersion %PHPCS_VERSION% --report-xml=.php-compatibility/report-%PHPCS_VERSION%.xml --report-full=.php-compatibility/report-%PHPCS_VERSION%.txt ./"
         ],
         "php-compatibility-report-85": [
             "Composer\\Config::disableProcessTimeout",
             "@putenv PHPCS_VERSION=8.5",
-            "@php vendor/bin/phpcs -p --standard=.phpcs.xml.dist --runtime-set testVersion %PHPCS_VERSION% --report-xml=var/php-compatibility/report-%PHPCS_VERSION%.xml --report-full=var/php-compatibility/report-%PHPCS_VERSION%.txt ./src"
+            "@php vendor/bin/phpcs -p --standard=.phpcs.xml.dist --runtime-set testVersion %PHPCS_VERSION% --report-xml=.php-compatibility/report-%PHPCS_VERSION%.xml --report-full=.php-compatibility/report-%PHPCS_VERSION%.txt ./"
         ]
     }
 }
