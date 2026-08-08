@@ -5,6 +5,8 @@
     <arg name="extensions" value="inc,php,phtml"/>
     <arg name="report-width" value="120"/>
 
+    <exclude-pattern>/vendor/*</exclude-pattern>
+
     <rule ref="PHPCompatibility">
         <!-- Provided by phpxmlrpc/polyfill-xmlrpc -->
         <exclude name="PHPCompatibility.FunctionUse.RemovedFunctions.xmlrpc_decodeRemoved"/>
