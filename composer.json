@@ -3,7 +3,8 @@
     "description": "RPC client and server around PHP's xmlrpc library",
     "keywords": ["RPC", "XML", "XMLRPC"],
     "require": {
-        "php": ">=5.4"
+        "php": ">=7.4 <8.3",
+        "phpxmlrpc/polyfill-xmlrpc": "1.0"
     },
     "autoload": {
         "psr-4": {
@@ -19,6 +20,31 @@
     ],
     "minimum-stability": "dev",
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.14@dev"
+        "friendsofphp/php-cs-fixer": "^2.14@dev",
+        "phpcompatibility/php-compatibility": "^10@dev",
+        "roave/security-advisories": "dev-latest",
+        "squizlabs/php_codesniffer": "^4"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "php-compatibility-report-74": [
+            "Composer\\Config::disableProcessTimeout",
+            "@putenv PHPCS_VERSION=7.4",
+            "@php vendor/bin/phpcs -p --standard=.phpcs.xml.dist --runtime-set testVersion %PHPCS_VERSION% --report-xml=var/php-compatibility/report-%PHPCS_VERSION%.xml --report-full=var/php-compatibility/report-%PHPCS_VERSION%.txt ./src"
+        ],
+        "php-compatibility-report-82": [
+            "Composer\\Config::disableProcessTimeout",
+            "@putenv PHPCS_VERSION=8.2",
+            "@php vendor/bin/phpcs -p --standard=.phpcs.xml.dist --runtime-set testVersion %PHPCS_VERSION% --report-xml=var/php-compatibility/report-%PHPCS_VERSION%.xml --report-full=var/php-compatibility/report-%PHPCS_VERSION%.txt ./src"
+        ],
+        "php-compatibility-report-85": [
+            "Composer\\Config::disableProcessTimeout",
+            "@putenv PHPCS_VERSION=8.5",
+            "@php vendor/bin/phpcs -p --standard=.phpcs.xml.dist --runtime-set testVersion %PHPCS_VERSION% --report-xml=var/php-compatibility/report-%PHPCS_VERSION%.xml --report-full=var/php-compatibility/report-%PHPCS_VERSION%.txt ./src"
+        ]
     }
 }

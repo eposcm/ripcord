@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ruleset name="Magento PHPCompatibility">
+    <description>Comprobación de compatibilidad PHP del proyecto</description>
+
+    <arg name="extensions" value="inc,php,phtml"/>
+    <arg name="report-width" value="120"/>
+
+    <rule ref="PHPCompatibility">
+        <!-- Provided by phpxmlrpc/polyfill-xmlrpc -->
+        <exclude name="PHPCompatibility.FunctionUse.RemovedFunctions.xmlrpc_decodeRemoved"/>
+        <exclude name="PHPCompatibility.FunctionUse.RemovedFunctions.xmlrpc_decode_requestRemoved"/>
+        <exclude name="PHPCompatibility.FunctionUse.RemovedFunctions.xmlrpc_encode_requestRemoved"/>
+        <exclude name="PHPCompatibility.FunctionUse.RemovedFunctions.xmlrpc_get_typeRemoved"/>
+        <exclude name="PHPCompatibility.FunctionUse.RemovedFunctions.xmlrpc_is_faultRemoved"/>
+        <exclude name="PHPCompatibility.FunctionUse.RemovedFunctions.xmlrpc_server_call_methodRemoved"/>
+        <exclude name="PHPCompatibility.FunctionUse.RemovedFunctions.xmlrpc_server_createRemoved"/>
+        <exclude name="PHPCompatibility.FunctionUse.RemovedFunctions.xmlrpc_server_register_introspection_callbackRemoved"/>
+        <exclude name="PHPCompatibility.FunctionUse.RemovedFunctions.xmlrpc_server_register_methodRemoved"/>
+        <exclude name="PHPCompatibility.FunctionUse.RemovedFunctions.xmlrpc_set_typeRemoved"/>
+    </rule>
+</ruleset>
